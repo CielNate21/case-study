@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA_Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meow Portfolio</title>
+
+    <link rel="stylesheet" href="style-portfolio.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="#" onclick="playVid()">Meow.</a>
+        <video loop class="video" id="video" onclick="playVideo()">
+          <source src="video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#favorites">Favurrits</a>
+        <a href="#fwends">Fwends</a>
+        <a href="#contact">Contact</a>
+        <a href="index-login.html">Login</a>
+
+        <span class="active-nav"></span>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>Hi Hoomans!!</h1>
+        <div class="text-animate">
+          <h3>I'm Meowwy The Cat</h3>
+        </div>
+        <p>
+          Purr meow whiskers cuddle nap play stretch tail whiskers purrfection
+          feline friends cozy sunny spots curiosity whisker-twitch soft fur
+          gentle purring paws explore hide climb furr-ever feline magic.
+        </p>
+        <div class="btn-box">
+          <button
+            class="btn"
+            id="eat-btn"
+            onclick="audioEating.play(), disableButtonEat()"
+          >
+            Feed Meow!
+          </button>
+          <button
+            class="btn"
+            id="meow-btn"
+            onclick="audioMeowing.play(), disableButtonMeow()"
+          >
+            Pet Meow!
+          </button>
+        </div>
+      </div>
+
+      <div class="soc-med">
+        <a
+          href="https://www.google.com/search?q=standing+little+cat&tbm=isch&ved=2ahUKEwjEutuH08-BAxURBYgKHUuQC5wQ2-cCegQIABAA&oq=standing+little+cat&gs_lcp=CgNpbWcQAzIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB46BAgjECc6BQgAEIAEOgcIABCKBRBDOggIABCABBCxAzoKCAAQigUQsQMQQzoLCAAQgAQQsQMQgwFQ8gVYvyBg8CFoAHAAeACAAdoDiAHzMZIBCjAuMS40LjExLjOYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=7qsWZcSLGpGKoATLoK7gCQ#imgrc=7ayCyYj8fUyb1M"
+          target="_blank"
+          ><i class="bx bxs-cat"></i
+        ></a>
+        <a
+          href="https://web.facebook.com/search/videos/?q=cute%20cats"
+          target="_blank"
+          ><i class="bx bxl-facebook"></i
+        ></a>
+        <a
+          href="https://www.youtube.com/results?search_query=cute+cats"
+          target="_blank"
+          ><i class="bx bxl-youtube"></i
+        ></a>
+      </div>
+
+      <span class="img-hover"></span>
+    </section>
+
+    <section class="about" id="about">
+      <h2 class="heading">About <span>Meow!</span></h2>
+      <div class="about-img">
+        <img src="about.jpg" alt="" />
+        <span class="circle-spin"></span>
+      </div>
+
+      <div class="about-content">
+        <h3>I'm Meowwy</h3>
+        <p>
+          Whiskers, the ultimate feline accessory, add charm to your every move.
+          Whether it's cuddles or naps, we play, stretch our tails, seeking
+          purrfection with our dear feline friends. Our paws are poised to
+          explore, hide, and climb into furr-ever memories, creating a world of
+          feline magic for hoomans.
+        </p>
+        <div class="btn-box btns">
+          <a href="#about" class="btn">Read Meowre!</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="favorites" id="favorites">
+      <h2 class="heading">Meow <span>Favurrits</span></h2>
+      <ul class="tilesWrap">
+        <li>
+          <h2>01</h2>
+          <h3>Sleeeping</h3>
+          <button>I love to sleep 16 hourss forever and ever everyday</button>
+        </li>
+        <li>
+          <h2>02</h2>
+          <h3>Playingg</h3>
+          <button>I love to run, hide, sneak, play, repeat with hooman!</button>
+        </li>
+        <li>
+          <h2>03</h2>
+          <h3>Eatingg</h3>
+          <button>I love milk, fish, beef, chicken, egg, and meattss</button>
+        </li>
+        <li>
+          <h2>04</h2>
+          <h3>Huuntingg</h3>
+          <button>I love to hunt outside and offer it to my hooman</button>
+        </li>
+      </ul>
+    </section>
+
+    <section class="fwends" id="fwends">
+      <div class="table-container">
+        <h2 class="heading">My <span>Fwendss!</span></h2>
+        <table class="table-body">
+          <thead>
+            <tr>
+              <th>Fwends</th>
+              <th>Likes</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Fwends">Nathaniel</td>
+              <td data-label="Likes">Givess me Fooods</td>
+              <td data-label="Role" class="z-index">Servantt</td>
+            </tr>
+            <tr>
+              <td data-label="Fwends">Cumin</td>
+              <td data-label="Likes">Always plays with me</td>
+              <td data-label="Role" class="z-index">Ginger Fwend</td>
+            </tr>
+            <tr>
+              <td data-label="Fwends">Beluga</td>
+              <td data-label="Likes">Comfyy Pillow</td>
+              <td data-label="Role" class="z-index">Black-White Fwend</td>
+            </tr>
+            <tr>
+              <td data-label="Fwends">Hecker</td>
+              <td data-label="Likes">Heck food with mee</td>
+              <td data-label="Role" class="z-index">Stripy Black Fwend</td>
+            </tr>
+            <tr>
+              <td data-label="Fwends">Moringa</td>
+              <td data-label="Likes">Gives me bath</td>
+              <td data-label="Role" class="z-index">Momma Meow</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Meow!</span></h2>
+      <form action="#">
+        <div class="input-box">
+          <div class="input-field">
+            <input type="text" placeholder="Furr Name" required />
+            <span class="focus"></span>
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Emeowll Adres" required />
+            <span class="focus"></span>
+          </div>
+        </div>
+
+        <div class="input-box">
+          <div class="input-field">
+            <input type="text" placeholder="Mobayl Nyaamber" required />
+            <span class="focus"></span>
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Emeowll Subjeck" required />
+            <span class="focus"></span>
+          </div>
+        </div>
+
+        <div class="textarea-field">
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Yoww Meowsage"
+            required
+          ></textarea>
+          <span class="focus"></span>
+        </div>
+
+        <div class="btn-box btns">
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer" id="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2023 by Ciel | All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-iconTop">
+        <a href="#"><i class="bx bx-up-arrow-alt"></i></a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
